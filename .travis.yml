@@ -19,5 +19,5 @@ script:
     - docker tag simple-node godstrump/simple-node:Final
 
 after_success:
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
     - docker push godstrump/simple-node
